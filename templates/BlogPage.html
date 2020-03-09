@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chachi Blog</title>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 1.75em;
+  background: #f4fafe;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #FFFFE2 0%, #94DEE0 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFE2), color-stop(100%, #94DEE0));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #FFFFE2 0%, #94DEE0 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #FFFFE2 0%, #94DEE0 100%);
+  /* Opera11.10+ */
+  background: -ms-linear-gradient(top, #FFFFE2 0%, #94DEE0 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #FFFFE2 0%, #94DEE0 100%);
+  /* W3C */
+  background-attachment: fixed;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+textarea {
+    width:90%;
+    max-width:90%;
+    max-height:30%;
+}
+</style>
+</head>
+<body>
+<table>
+    <col width="80%">
+    <col width="20%">
+    <tr>
+        <td><h1> Blog de cosas que son muy chachis </h1></td>
+        <td>
+<iframe id="loginFrame" src="login.html" width="100%"  align="right">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+        </td>
+    </tr>
+</table>
+<h1> Mega interesante esto: </h1>
+<p>
+    Bla bla bla bla muchas cosas bla bla bla bla
+</p>
+<h2> Comentarios: </h2>
+<table style="width:100%">
+    <col width="20%">
+    <col width="80%">
+{%for comentario in comentarios%}
+<tr>
+    <td>{{comentario[0]}}</td>
+    <td>{{comentario[1]}}</td>
+</tr>
+{%endfor%}
+</table>
+<br>
+<br>
+<form action="addComment" method="POST">
+    <textarea name="comment" id="comment" rows="10" cols="30">Escribe aquí tu comentario...</textarea><br><br>
+  <input type="submit" value="Comentar" >
+</form>
+</body>
+</html>
