@@ -18,7 +18,7 @@ insert into usuarios (email, clave) values ('vegeta@gmail.com','777');
 #Para probar el SQLInjection
 '''
 vegeta@gmail.com
-' or 1=1  -- '
+' or 1=1  -- 
 '''
 
 #Para probar el XSS
