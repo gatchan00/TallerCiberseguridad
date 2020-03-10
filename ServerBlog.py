@@ -2,9 +2,14 @@ from flask import Flask, escape, session, request, Response, redirect, url_for, 
 import pymysql
 
 '''
-Importante! hay que arrancar el servidor MySQL
-D:\mysql-8.0.19-winx64\bin
+Importante! hay que arrancar el servidor MySQL 
+En windows:
+ruta_del_Mysql\bin
 mysqld --console
+
+En Linux: seguramente lo tengáis levantado como servicio
+systemctl status mysqld 
+service mysqld status
 '''
 
 #Se necesita un servidor MySQL, con lo siguiente:
@@ -18,7 +23,7 @@ insert into usuarios (email, clave) values ('vegeta@gmail.com','777');
 #Para probar el SQLInjection
 '''
 vegeta@gmail.com
-' or 1=1  -- 
+' or 1=1  -- '
 '''
 
 #Para probar el XSS

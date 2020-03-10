@@ -48,8 +48,9 @@ Existen dos usuarios, usaremos el usuario **vegeta@gmail.com** con contraseña *
 
 Posteriormente nos conectaremos como otro usuario cuya contraseña (supuestamente) no conocemos, el usuario **misterio@raro.sa** y como contraseña realizaremos el **SQLInjection**. Para ello escribiremos lo siguiente como contraseña:
 
+**OJO**: es importante dejar un espacio detrás del **--**, por eso añadimos un apóstrofe, para evitar que no copiéis el espacio.
 ```sql
-' or 1=1  -- 
+' or 1=1  -- '
 ``` 
 
 ## 4- Y ahora nos toca robar datos
