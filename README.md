@@ -26,7 +26,8 @@ pip install pymysql
 Se necesita una base de datos MySQL en local, con usuario **root** con contraseña **root** (podemos usar otra base de datos y/o usuario, contraseña, siempre que lo modifiquemos en el código), sobre la que ejecutaremos el siguiente código:
 
 ```sql
-create database usuarios
+create database usuarios;
+use usuarios;
 create table usuarios (email varchar(64), clave varchar(32), created timestamp default CURRENT_TIMESTAMP, primary key (email));
 insert into usuarios (email, clave) values ('misterio@raro.sa','123abc');
 insert into usuarios (email, clave) values ('vegeta@gmail.com','777');

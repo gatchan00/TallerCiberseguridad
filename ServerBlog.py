@@ -14,7 +14,8 @@ service mysqld status
 
 #Se necesita un servidor MySQL, con lo siguiente:
 '''
-create database usuarios
+create database usuarios;
+use usuarios;
 create table usuarios (email varchar(64), clave varchar(32), created timestamp default CURRENT_TIMESTAMP, primary key (email));
 insert into usuarios (email, clave) values ('caca@oloro.sa','123abc');
 insert into usuarios (email, clave) values ('vegeta@gmail.com','777');
